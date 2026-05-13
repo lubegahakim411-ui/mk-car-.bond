@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Website Animation</title>
+
+<style>
+    body{
+        margin:0;
+        font-family:Arial, sans-serif;
+        background:#f4f4f4;
+    }
+
+    /* HEADER */
+    header{
+        background:#111;
+        color:white;
+        padding:20px;
+        text-align:center;
+    }
+
+    /* NAVIGATION */
+    nav{
+        background:#333;
+        text-align:center;
+        padding:15px;
+    }
+
+    nav a{
+        color:white;
+        text-decoration:none;
+        margin:0 15px;
+        font-size:18px;
+        transition:0.3s;
+    }
+
+    /* SIMPLE TRANSITION */
+    nav a:hover{
+        color:gold;
+        letter-spacing:2px;
+    }
+
+    /* HERO SECTION */
+    .hero{
+        height:400px;
+        background:url('download.jpg') center/cover no-repeat;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    .hero h1{
+        color:white;
+        font-size:50px;
+        background:rgba(0,0,0,0.5);
+        padding:20px;
+        border-radius:10px;
+
+        /* SIMPLE ANIMATION */
+        animation:slideIn 2s ease;
+    }
+
+    /* ANIMATION KEYFRAMES */
+    @keyframes slideIn{
+        from{
+            opacity:0;
+            transform:translateY(-50px);
+        }
+
+        to{
+            opacity:1;
+            transform:translateY(0);
+        }
+    }
+
+    /* CARDS */
+    .cars{
+        display:flex;
+        justify-content:center;
+        gap:20px;
+        padding:40px;
+        flex-wrap:wrap;
+    }
+
+    .card{
+        background:white;
+        width:250px;
+        border-radius:10px;
+        overflow:hidden;
+        box-shadow:0 4px 8px rgba(0,0,0,0.2);
+
+        /* TRANSITION */
+        transition:transform 0.4s, box-shadow 0.4s;
+    }
+
+    .card img{
+        width:100%;
+        height:180px;
+        object-fit:cover;
+    }
+
+    .card h3,
+    .card p{
+        padding:10px;
+    }
+
+    /* HOVER EFFECT */
+    .card:hover{
+        transform:translateY(-10px);
+        box-shadow:0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    footer{
+        background:#111;
+        color:white;
+        text-align:center;
+        padding:15px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>MK CarBond</h1>
+    <p>Drive Your Dream Car</p>
+</header>
+
+<nav>
+</nav>
+
+<div class="hero">
+    <h1>Luxury Cars Available</h1>
+</div>
+
+<section class="cars">
+
+    <div class="card">
+        <img src="download.jpg" alt="Toyota">
+        <h3>Toyota Corolla</h3>
+        <p>Reliable and fuel efficient.</p>
+    </div>
+
+    <div class="card">
+        <img src="download (1).jpg" alt="BMW">
+        <h3>BMW X5</h3>
+        <p>Luxury SUV with powerful performance.</p>
+    </div>
+
+    <div class="card">
+        <img src="download.jpg" alt="Range Rover">
+        <h3>Range Rover</h3>
+        <p>Elegance and comfort combined.</p>
+    </div>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 MK CarBond</p>
+</footer>
+
+</body>
+</html>
